@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文通智答</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="upload-container">
+      <header><h3>文档上传</h3></header>
+      <form id="uploadForm">
+        <input
+          type="file"
+          id="fileInput"
+          multiple
+          accept=".txt, .pdf, .doc, .docx"
+        />
+        <button type="button" onclick="handleFileUpload()">上传</button>
+      </form>
+      <p class="hint">支持多文档上传. 支持格式：.txt, .pdf, .docx</p>
+      <div id="uploadedFilesList"><!-- 上传的文件列表将显示在这里 --></div>
+    </div>
+
+    <div class="chat-container">
+      <div class="chat-header">
+        <h1>文通智答</h1>
+      </div>
+      <div class="chat-box">
+        <div class="messages">
+          <!-- 聊天消息将被插入这里 -->
+        </div>
+        <div class="message-input">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type a message..."
+          />
+          <button onclick="sendMessage()">发送</button>
+          <button onclick="recordAudio()" id="audio">录音</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

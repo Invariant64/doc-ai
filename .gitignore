@@ -1,0 +1,8 @@
+*
+*.*
+!.gitignore
+!index.html
+!script.js
+!style.css
+!main.py
+!requirements.txt
