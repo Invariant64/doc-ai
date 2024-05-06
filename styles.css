@@ -1,0 +1,151 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* 防止内容溢出 */
+}
+
+body {
+    /* 左右排列 */
+    display: flex;
+}
+
+.upload-container, .chat-container {
+    height: 100%;
+    margin: auto; /* 水平居中 */
+    margin-bottom: 20px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-container {
+    width: 25%;
+}
+
+.chat-container {
+    width: 75%;
+}
+
+.chat-header {
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.chat-box {
+    padding: 15px;
+    background: #fff;
+    height: calc(100% - 50px); /* 减去标题栏高度 */
+}
+
+.messages {
+    overflow-y: auto;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 80%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.message {
+    display: block; /* 确保消息是块级元素 */
+    width: fit-content; /* 使消息宽度适应内容 */
+    padding: 10px;
+    border-radius: 5px;
+    align-items: flex-start; /* 确保内容在flex容器中顶部对齐 */
+    margin-bottom: 10px;
+    max-width: 70%; /* 可以设置一个最大宽度百分比，根据需要调整 */
+    clear: both;
+    word-wrap: break-word; /* 允许长单词换行 */
+}
+
+.user-message {
+    background-color: #d1ecf1;
+    margin-left: auto; /* 将用户消息推到右侧 */
+}
+
+.bot-message {
+    background-color: #e0e0e0;
+    margin-right: auto; /* 将机器人消息推到左侧 */
+    /* 遇到'\n'时换行 */
+    white-space: pre-line;
+}
+
+
+.message.user-message {
+    background-color: #d1ecf1;
+    float: right;
+}
+
+#message-input {
+    height: 30px;
+    width: calc(100% - 200px); /* 减去发送按钮的宽度 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #5cb85c;
+    color: white;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+
+button:hover {
+    background: #4cae4c;
+}
+
+.upload-container header {
+    padding: 5px;
+    color: black;
+
+    /* 其中的元素垂直居中 */
+    display: flex;
+    justify-content: center;
+}
+
+#uploadForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#fileInput {
+    margin-right: 5px;
+}
+
+.uploaded-file {
+    background-color: #e9ecef;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.message-input {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.hint {
+    /* 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color:grey;
+}
