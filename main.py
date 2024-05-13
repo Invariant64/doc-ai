@@ -21,7 +21,8 @@ class WenTongZhiDa:
                 os.remove("audios/" + file)
 
     def clientInit(self):
-        self.client = ZhipuAI(api_key="a00cd208094df8a00c49b37b63ddbd05.ygWgeUVw5qkMfUIE")
+        api_key = os.getenv('ZHIPU_AI_API_KEY')
+        self.client = ZhipuAI(api_key=api_key)      
     
     def getFilesContent(self):
         content = ""
